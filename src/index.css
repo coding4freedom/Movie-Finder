@@ -7,11 +7,19 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Roboto", sans-serif; 
   line-height: 1.5; /* Improve readability */
-  color: #333; /* Dark text color */
-  background-color: #f9f9f9; /* Light background color */
+  color: #d8e2e1; /* Dark text color */
+  background-color: #090c11; /* Light background color */
+}
+
+li {
+  list-style: none;
 }
 
 /* Links */
