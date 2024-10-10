@@ -5,7 +5,8 @@
 
 }
 .logo__wrapper {
-    background: #09482b;
+    background: rgb(9,72,43);
+    background: linear-gradient(90deg, rgba(9,72,43,1) 0%, rgba(9,72,43,1) 56%, rgba(8,8,6,1) 100%);
     border-radius: 6px;
     display: flex;
     justify-content: center;
@@ -27,4 +28,10 @@
     gap: 2rem;
     justify-content: center;
     align-items: center;
+}
+.nav__links a{
+    color: var(--secondary-color);
+}
+.nav__btn {
+    padding: 1rem 1.5rem;
 }

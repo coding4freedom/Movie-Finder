@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import "./Nav.css";
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
@@ -10,10 +11,10 @@ const Nav = () => {
             <span>Movies</span>
         </div>
         <ul className='nav__list'>
-            <li>Home</li>
-            <li>Find Movies</li>
-            <li>Contact</li>
-        </ul>
+            <li className='nav__links'><Link to='/' >Home</Link></li>
+            <li className='nav__links'><Link to='/movies' >Find Movies</Link></li>
+            <li className='nav__links'><button className='nav__btn'>Contact</button></li>           
+        </ul>        
     </div>
   )
 }
