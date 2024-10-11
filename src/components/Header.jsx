@@ -13,7 +13,7 @@ const Header = () => {
         </h1>
         <p>
           FIND MOVIES USING 
-          <span className='circle'><img src={logo} className='header__logo' alt="" /></span>
+          <span className='circle header__span--logo-wrapper'><img src={logo} className='header__logo' alt="" /></span>
           <span className='stand-out'>MOVIES</span>
         </p>
     </div>
