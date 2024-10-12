@@ -1,0 +1,12 @@
+
+.movie-pic {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie-pic img {
+    width: 40%;
+    max-width: 500px;
+}
