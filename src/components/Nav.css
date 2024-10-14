@@ -30,6 +30,7 @@
     align-items: center;
 }
 .nav__links a{
+    font-size: 1.5rem;
     color: var(--secondary-color);
 }
 .nav__btn {

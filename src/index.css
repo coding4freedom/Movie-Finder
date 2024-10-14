@@ -4,7 +4,7 @@
 /* Color variables */
 :root {
   --primary-color: #069c44;  /* lighter green  */
-  --secondary-color: #d8e2e1;  /* white  */
+  --secondary-color: #fff;  /* white  */
   --background-color: #181818; /* black */
   --offset-color: #09482b; /* darker green */
 }
