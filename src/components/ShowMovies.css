@@ -1,7 +1,7 @@
 
 .show {
     width: 100%;
-    margin-top: 9rem;
+    margin-top: 6.5rem;
 }
 .show__title--wrapper {
     display: flex;
@@ -28,15 +28,17 @@
 .show__card--title {
     position: relative;
     font-size: 2.5rem;
-    min-height: 170px;
+    min-height: 375px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 16px;     
+    justify-content: center;    
+    margin: 0;        
     background-color: #f5f5f5;
     box-sizing: border-box;
     margin-bottom: 1.4rem;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMGNlYmM1NmQtYWExMS00NmRjLTg5ZmEtMmYyYzJkMzljYWMxXkEyXkFqcGc@._V1_SX300.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .card__overlay {
     position: absolute;
@@ -58,7 +60,6 @@
 .show__card--title:hover .card__overlay {  
     left: 0; 
 }
-.show__card--title h2,
 .show__card--title div,
 .show__para {
     color: var(--primary-color);

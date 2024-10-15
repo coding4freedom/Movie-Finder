@@ -4,5 +4,6 @@
   padding: 2rem;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
