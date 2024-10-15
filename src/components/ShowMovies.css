@@ -12,9 +12,13 @@
 }
 .show__movies--wrapper {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 900px;
+    margin: auto;
 }
-.show__card {
+.show__card {      
     background-color: #fff; 
     border-radius: 12px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -22,7 +26,7 @@
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
-    min-width: 250px;
+    width: 250px;
     padding-bottom: 1rem; 
 }
 .show__card--title {
@@ -39,6 +43,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+.skeleton {
+    background-color: #e0e0e0; 
 }
 .card__overlay {
     position: absolute;
@@ -70,4 +77,18 @@
 }
 .show__card p {    
     padding: .5rem ;        
+}
+.skeleton-title {
+    background-color: #d0d0d0;
+    background-image: none; 
+    width: 100%; 
+    height: 50px; 
+    margin: 0 auto; 
+}
+  
+ .skeleton-para {
+    background-color: #d0d0d0; 
+    height: 20px; 
+    margin: 10px auto; 
+    width: 60%; 
 }
