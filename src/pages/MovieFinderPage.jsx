@@ -4,8 +4,11 @@ import SearchBar from '../components/ui/SearchBar';
 import Banner from '../components/Banner';
 import styles from './MovieFinderPage.module.css';
 import ShowMovies from '../components/ShowMovies';
+import { useSearch } from '../provider/SearchContext';
 
 const MovieFinderPage = () => {
+  const { searchMovie } = useSearch();
+
   return (
     <>
       <Banner />
@@ -14,7 +17,7 @@ const MovieFinderPage = () => {
         <h2>Browse our Movie Listings</h2>
         <SearchBar />
       </div>
-      <ShowMovies />
+      <ShowMovies searchMovie={searchMovie} />
     </>
   )
 }
