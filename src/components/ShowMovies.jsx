@@ -49,8 +49,8 @@ const ShowMovies = () => {
               ))
             : movies.slice(0, 6).map((movie, index) => {
                 return (
-                  <div className="show__card" key={index}>
-                    <div className="show__card--title">
+                  <div className="show__card half__transparent" key={index}>
+                    <div className="show__card--title" style={{backgroundImage: `url(${movie.Poster})`, backgroundColor: '#181818'}}>
                       <div className="card__overlay">More Info</div>
                     </div>
                     <p className="show__para">

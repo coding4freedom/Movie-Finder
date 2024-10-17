@@ -29,6 +29,9 @@
     width: 250px;
     padding-bottom: 1rem; 
 }
+.half__transparent {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%); 
+}
 .show__card--title {
     position: relative;
     font-size: 2.5rem;
