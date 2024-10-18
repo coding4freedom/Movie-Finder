@@ -8,9 +8,10 @@ export const useSearch = () => {
 
 export const SearchProvider = ({ children }) => {
     const [searchMovie, setSearchMovie] = useState('');
+    const [getMovieID, setGetMovieID] = useState('');
 
     return (
-        <SearchContext.Provider value={{ searchMovie, setSearchMovie }}>
+        <SearchContext.Provider value={{ searchMovie, setSearchMovie, getMovieID, setGetMovieID }}>
             { children }
         </SearchContext.Provider>
     );

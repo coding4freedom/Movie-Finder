@@ -5,9 +5,9 @@ import './ShowMovies.css';
 
 const ShowMovies = () => {
     const apiKey = import.meta.env.VITE_MOVIE_API_KEY;
-    const { searchMovie } = useSearch();
+    const { searchMovie, setGetMovieID } = useSearch();
     const [loading, setLoading] = useState(false)
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState([]);    
     const [shouldFetch, setShouldFetch] = useState(false);
   
     async function fetchData() {
@@ -23,6 +23,10 @@ const ShowMovies = () => {
         setLoading(false);
       }
     };
+
+    function onClickGetID(id) {
+      setGetMovieID(id)
+    }
 
     useEffect(() => {
       if (shouldFetch && searchMovie) {
@@ -51,7 +55,7 @@ const ShowMovies = () => {
                 return (
                   <div className="show__card half__transparent" key={index}>
                     <div className="show__card--title" style={{backgroundImage: `url(${movie.Poster})`, backgroundColor: '#181818'}}>
-                      <div className="card__overlay">More Info</div>
+                      <div className="card__overlay" onClick={() => onClickGetID(movie.imdbID)}>More Info</div>
                     </div>
                     <p className="show__para">
                       <strong>Title:</strong> {movie.Title}
