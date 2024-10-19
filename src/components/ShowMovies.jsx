@@ -2,9 +2,11 @@ import React, {useEffect, useState} from 'react';
 import { useSearch } from '../provider/SearchContext';
 import axios from 'axios';
 import './ShowMovies.css';
+import { useNavigate } from 'react-router-dom';
 
 const ShowMovies = () => {
     const apiKey = import.meta.env.VITE_MOVIE_API_KEY;
+    const navigate = useNavigate();
     const { searchMovie, setGetMovieID } = useSearch();
     const [loading, setLoading] = useState(false)
     const [movies, setMovies] = useState([]);    
@@ -25,7 +27,9 @@ const ShowMovies = () => {
     };
 
     function onClickGetID(id) {
-      setGetMovieID(id)
+      setGetMovieID(id);
+      console.log(id);
+      navigate('/info');
     }
 
     useEffect(() => {
