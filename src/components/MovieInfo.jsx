@@ -28,23 +28,29 @@ const MovieInfo = () => {
 
     return (
         <div className='movie__info'>
-            <div className="movie__info--poster" style={{backgroundImage: `url(${posterInfo.Poster})`}}></div>
+            { posterInfo && posterInfo.Poster && (
+                <div className="movie__info--poster" style={{backgroundImage: `url(${posterInfo.Poster})`}}></div>
+            )
+
+            }            
             <div className="movie__info--short">
-                <p>Title: {posterInfo.Title}</p>
-                <p>Year: {posterInfo.Year}</p>
-                <p>Rated: {posterInfo.Rated}</p>
-                <p>Released: {posterInfo.Released}</p>
-                <p>Runtime: {posterInfo.Runtime}</p>
-                <p>Genre: {posterInfo.Genre}</p>
-                <p>Director: {posterInfo.Director}</p>
+                <p><strong>Title:</strong> {posterInfo.Title}</p>
+                <p><strong>Year:</strong> {posterInfo.Year}</p>
+                <p><strong>Rated:</strong> {posterInfo.Rated}</p>
+                <p><strong>Released:</strong> {posterInfo.Released}</p>
+                <p><strong>Runtime:</strong> {posterInfo.Runtime}</p>
+                <p><strong>Genre:</strong> {posterInfo.Genre}</p>
+                <p><strong>Director:</strong> {posterInfo.Director}</p>
             </div>
-            {/* <div className="movie__info--actors">
-                {posterInfo.Actors.split(',').map((actor, index) => {
-                    <p className='actors__name' key={index}>{actor}</p>
-                })}
-            </div> */}
+            <div className="movie__info--actors">
+                <p className='actors__para'> <strong>Actors:</strong>
+                {posterInfo && posterInfo.Actors ? posterInfo.Actors.split(',').map((actor, index) => {
+                   return <span className='actors__name' key={index}>{` ${actor.trim()}, `}</span>
+                }) : <></>}
+                </p>
+            </div>
             <div className="movie__info--para">
-                <p className='movie__info--plot'>Plot: {posterInfo.Plot}</p>
+                <p className='movie__info--plot'><strong>Plot:</strong> {posterInfo.Plot}</p>
             </div>
         </div>
     )

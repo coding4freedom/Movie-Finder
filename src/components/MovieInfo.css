@@ -1,0 +1,29 @@
+
+.movie__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.movie__info--poster{
+    min-width: 100px;
+    max-width: 500px;
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 3rem 0 1rem 0;
+}
+.movie__info--short {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .3rem;
+}
+.movie__info--actors {
+    display: flex;
+    justify-content: start;
+    margin: .3rem 0;
+}
+.movie__info--para {
+    display: flex;
+    justify-content: start;
+}
