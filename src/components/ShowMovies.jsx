@@ -23,6 +23,7 @@ const ShowMovies = () => {
         console.error('Error fetching data:', error);
       } finally {
         setLoading(false);
+        setShouldFetch(false)
       }
     };
 
@@ -33,17 +34,19 @@ const ShowMovies = () => {
     }
 
     useEffect(() => {
-      if (shouldFetch && searchMovie) {
-        fetchData();
-        setShouldFetch(false)
-      }
-    },[shouldFetch]);
-
-    useEffect(() => {
       if (searchMovie) {
         setShouldFetch(true)
       }
     }, [searchMovie]);
+
+    useEffect(() => {
+      if (shouldFetch && searchMovie) {
+        fetchData();
+        setShouldFetch(false)
+      }
+    },[shouldFetch, searchMovie]);
+
+    
     
     return (
       <div className="show">

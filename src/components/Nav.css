@@ -35,4 +35,67 @@
 }
 .nav__btn {
     padding: 1rem 1.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+.nav__btn:hover {
+    transform: translateY(2px); 
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+}
+.modal-content {
+    background: #848499;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 30%;
+    position: relative;
+    max-width: 500px; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;      
+    word-break: break-all;
+}
+.modal-content p {
+    text-align: left; 
+    margin: 0; 
+    padding-left: 1.5rem; 
+}
+.modal-content p {
+    display: flex; /
+}
+.modal-content p a {
+    color: var(--primary-color);
+}
+.modal-content p::before {
+    content: ""; 
+    flex: 0 0 1.5rem; 
+}  
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Media queries for modal  */
+@media (max-width: 768px) {
+    .modal-content {
+      width: 50%;
+    }
+}
+  
+@media (max-width: 480px) {
+    .modal-content {
+      width: 80%;
+    }
 }
