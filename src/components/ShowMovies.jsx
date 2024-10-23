@@ -7,9 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const ShowMovies = () => {
     const apiKey = import.meta.env.VITE_MOVIE_API_KEY;
     const navigate = useNavigate();
-    const { searchMovie, setGetMovieID } = useSearch();
-    const [loading, setLoading] = useState(false)
-    const [movies, setMovies] = useState([]);    
+    const { searchMovie, setGetMovieID, movies, setMovies } = useSearch();
+    const [loading, setLoading] = useState(false);        
     const [shouldFetch, setShouldFetch] = useState(false);
   
     async function fetchData() {

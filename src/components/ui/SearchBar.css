@@ -21,3 +21,14 @@
     font-size: 2rem;    
     color: var(--primary-color);
 }
+
+/* Media Queries for Search bar  */
+
+@media (max-width: 750px) {
+    .search {
+        width: 80%;
+    }
+    .search__input {
+        font-size: 1.2rem;
+    }
+}

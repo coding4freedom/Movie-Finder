@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSearch } from '../../provider/SearchContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import './SearchBar.css';
 
 const SearchBar = () => {
   const { searchMovie, setSearchMovie } = useSearch();
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -15,7 +17,8 @@ const SearchBar = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    navigate('/movies');
+    setLoading(true);
+    navigate('/movies');    
   }
 
   return (
@@ -28,8 +31,8 @@ const SearchBar = () => {
           value={searchMovie}
           onChange={handleChange}
         />
-        <button className="search__btn">
-          <FontAwesomeIcon className="search__icon" icon={faMagnifyingGlass} />
+        <button className="search__btn" disabled={loading}>
+          <FontAwesomeIcon className="search__icon" icon={ loading ? faSpinner: faMagnifyingGlass} />
         </button>
       </div>
     </form>

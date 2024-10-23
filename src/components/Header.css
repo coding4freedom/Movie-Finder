@@ -21,3 +21,36 @@
     display: flex;
     
 }
+
+/* Media Queries for Header  */
+@media (max-width: 1050px) {
+    .header {
+        width: 70%;
+        margin: 0 auto;        
+    }
+    .header p {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 875px) {
+    .header {
+        width: 80%;
+        margin: 0 auto;        
+    }
+    .header h1 {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+    }
+    .header p {
+        font-size: 1.5rem;
+    }
+    p .header__logo {
+        width: 20px;
+        height: 25px;
+    }
+    #header .header__span--logo-wrapper {
+        width: 35px;
+        height: 35px;
+    }
+}
