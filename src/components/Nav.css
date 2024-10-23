@@ -27,18 +27,33 @@
     display: flex;
     gap: 2rem;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 .nav__links a{
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--secondary-color);    
 }
+
 .nav__btn {
     padding: 1rem 1.5rem;
     transition: transform 0.2s ease-in-out;
 }
 .nav__btn:hover {
     transform: translateY(2px); 
+}
+.nav__btn-mobile {
+    display: none; /* Hidden by default */
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes the button a perfect circle */
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;    
+    transition: background-color 0.3s ease;
 }
 .modal {
     position: fixed;
@@ -92,10 +107,34 @@
     .modal-content {
       width: 50%;
     }
-}
-  
+}  
 @media (max-width: 480px) {
     .modal-content {
       width: 80%;
+    }
+    .modal-content p {
+        padding-left: 0px;
+    }
+}
+
+/* Media queries for Nav  */
+@media (max-width: 660px) {
+    .logo__wrapper {
+        display: none;
+    }
+    .nav{
+        justify-content: center;
+    }
+}
+@media (max-width: 466px) {
+    .nav__links a {
+        font-size: 1.2rem;
+    }
+    .nav__btn {
+      display: none; 
+    }
+  
+    .nav__btn-mobile {
+      display: flex; 
     }
 }

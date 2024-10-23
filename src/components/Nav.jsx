@@ -22,6 +22,8 @@ const Nav = () => {
             <li className='nav__links'><button className='nav__btn' onClick={openModal}>Contact</button></li>           
         </ul>
 
+        <button className='nav__btn-mobile' onClick={openModal}>C</button>
+
         {isModalOpen && (
         <div className='modal'>
           <div className='modal-content'>
