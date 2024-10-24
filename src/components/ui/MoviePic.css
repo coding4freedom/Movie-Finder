@@ -10,3 +10,20 @@
     width: 40%;
     max-width: 500px;
 }
+
+/* Media Queries for Movie Pic */
+
+@media (max-width: 750px) {
+    .movie-pic {
+        margin-top: 2rem;
+    }
+    .movie-pic img {        
+        width: 50%;
+    }
+}
+
+@media (max-width: 635px) {
+    .movie-pic img {        
+        width: 60%;
+    }
+}
