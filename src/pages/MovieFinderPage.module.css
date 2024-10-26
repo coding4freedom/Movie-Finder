@@ -3,3 +3,26 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
+
+/* Media queries for MovieFinderPage */
+@media (max-width: 635px) {
+    .customSearchBar h2 {
+        font-size: 2rem;
+        margin-top: 2rem
+    }
+}
+@media (max-width: 460px) {
+    .customSearchBar h2 {        
+        margin-top: 1.5rem
+    }
+}
+@media (max-width: 435px) {
+    .customSearchBar h2 {        
+        margin-top: 1rem
+    }
+}
+@media (max-width: 325px) {
+    .customSearchBar h2 {        
+        font-size: 1.8rem;
+    }
+}

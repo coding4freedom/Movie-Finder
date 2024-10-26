@@ -95,3 +95,12 @@
     margin: 10px auto; 
     width: 60%; 
 }
+
+
+/* Media queries Show Movies  */
+
+@media (max-width: 460px) {
+    .show {
+        margin-top: 4rem;
+    }
+}

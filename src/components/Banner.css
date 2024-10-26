@@ -22,3 +22,11 @@
     bottom: 0;
     background-color: rgba(9, 72, 43, .63);
 }
+
+/*  Media queries for Banner */
+
+@media (max-width: 445px) {
+    #banner {
+        height: 370px;
+    }
+}
