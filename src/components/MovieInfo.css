@@ -1,11 +1,15 @@
 
 .movie__info {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
 }
-.movie__info--poster{
-    min-width: 100px;
+.movie__info p {
+    font-size: 1.3rem;
+    text-align: left;
+}
+.movie__info--poster {
+    min-width: 265px;
     max-width: 500px;
     min-height: 350px;
     background-repeat: no-repeat;
@@ -25,5 +29,13 @@
 }
 .movie__info--para {
     display: flex;
-    justify-content: start;
+    justify-content: start;    
+}
+
+/*  Media Queries MovieInfo  */
+
+@media (max-width: 345px) {
+    .movie__info--poster {
+        min-width: 230px;
+    }
 }

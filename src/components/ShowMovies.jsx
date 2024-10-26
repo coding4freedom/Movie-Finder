@@ -8,7 +8,7 @@ const ShowMovies = () => {
     const apiKey = import.meta.env.VITE_MOVIE_API_KEY;
     const navigate = useNavigate();
     const { searchMovie, setGetMovieID, movies, setMovies } = useSearch();
-    const [loading, setLoading] = useState(true);        
+    const [loading, setLoading] = useState(false);        
     const [shouldFetch, setShouldFetch] = useState(false);
   
     async function fetchData() {

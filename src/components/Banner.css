@@ -25,7 +25,7 @@
 
 /*  Media queries for Banner */
 
-@media (max-width: 445px) {
+@media (max-width: 460px) {
     #banner {
         height: 370px;
     }
