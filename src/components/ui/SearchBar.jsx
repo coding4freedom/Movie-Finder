@@ -7,8 +7,8 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import './SearchBar.css';
 
 const SearchBar = () => {
-  const { searchMovie, setSearchMovie } = useSearch();
-  const [loading, setLoading] = useState(false);
+  const { searchMovie, setSearchMovie, loading, setLoading, setClick } = useSearch();
+  // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -17,7 +17,8 @@ const SearchBar = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    setLoading(true);
+    // setLoading(true);
+    setClick(true);
     navigate('/movies');    
   }
 

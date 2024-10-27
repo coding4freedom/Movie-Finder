@@ -7,9 +7,18 @@ import { useNavigate } from 'react-router-dom';
 const ShowMovies = () => {
     const apiKey = import.meta.env.VITE_MOVIE_API_KEY;
     const navigate = useNavigate();
-    const { searchMovie, setGetMovieID, movies, setMovies } = useSearch();
-    const [loading, setLoading] = useState(false);        
     const [shouldFetch, setShouldFetch] = useState(false);
+    const {
+      searchMovie,
+      setGetMovieID,
+      movies,
+      setMovies,
+      loading,
+      setLoading,
+      click, setClick
+    } = useSearch();
+    // const [loading, setLoading] = useState(false);        
+    
   
     async function fetchData() {
       try {
@@ -22,7 +31,7 @@ const ShowMovies = () => {
         console.error('Error fetching data:', error);
       } finally {
         setLoading(false);
-        setShouldFetch(false)
+        setShouldFetch(false);        
       }
     };
 
@@ -33,7 +42,7 @@ const ShowMovies = () => {
     }
 
     useEffect(() => {
-      if (searchMovie) {
+      if (searchMovie && click) {
         setShouldFetch(true)
       }
     }, [searchMovie]);
@@ -41,7 +50,8 @@ const ShowMovies = () => {
     useEffect(() => {
       if (shouldFetch && searchMovie) {
         fetchData();
-        setShouldFetch(false)
+        setShouldFetch(false);
+        setClick(false);
       }
     },[shouldFetch, searchMovie]);
 

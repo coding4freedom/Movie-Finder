@@ -6,8 +6,7 @@ import styles from './MovieFinderPage.module.css';
 import ShowMovies from '../components/ShowMovies';
 import { useSearch } from '../provider/SearchContext';
 
-const MovieFinderPage = () => {
-  const { searchMovie } = useSearch();
+const MovieFinderPage = () => {  
 
   return (
     <>
@@ -17,7 +16,7 @@ const MovieFinderPage = () => {
         <h2>Browse our Movie Listings</h2>
         <SearchBar />
       </div>
-      <ShowMovies searchMovie={searchMovie} />
+      <ShowMovies />
     </>
   )
 }
