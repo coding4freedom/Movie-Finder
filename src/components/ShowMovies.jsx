@@ -45,7 +45,7 @@ const ShowMovies = () => {
       if (searchMovie && click) {
         setShouldFetch(true)
       }
-    }, [searchMovie]);
+    }, [searchMovie, click]);
 
     useEffect(() => {
       if (shouldFetch && searchMovie) {
